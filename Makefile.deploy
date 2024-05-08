@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ssh $USER@$REMOTE_SERVER mkdir -p $REMOTE_DIR
+scp Dockerfile $USER@$REMOTE_SERVER:$REMOTE_DIR/.
+scp config.json $USER@$REMOTE_SERVER:$REMOTE_DIR/.
+ssh $USER@$REMOTE_SERVER docker build -t $IMAGE_NAME $REMOTE_DIR
+ssh $USER@$REMOTE_SERVER docker stop -t 0 my_$IMAGE_NAME
+ssh $USER@$REMOTE_SERVER docker run --rm -d $DOCKER_ARGS --name my_$IMAGE_NAME -p $REMOTE_PORT:$REMOTE_PORT -v $PWD/tvdb.sqlite:/app/tvdb.sqlite $IMAGE_NAME
+ssh $USER@$REMOTE_SERVER rm $REMOTE_DIR/config.json
