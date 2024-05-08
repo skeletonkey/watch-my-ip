@@ -4,7 +4,7 @@ go 1.22
 
 require (
 	github.com/skeletonkey/lib-core-go v0.3.0
-	github.com/skeletonkey/lib-instance-gen-go v0.6.0
+	github.com/skeletonkey/lib-instance-gen-go v0.6.1
 )
 
 require (
