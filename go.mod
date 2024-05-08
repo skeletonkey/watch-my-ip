@@ -15,8 +15,3 @@ require (
 	github.com/rs/zerolog v1.32.0 // indirect
 	golang.org/x/sys v0.12.0 // indirect
 )
-
-replace (
-	github.com/skeletonkey/lib-core-go => ../lib-core-go
-	github.com/skeletonkey/lib-instance-gen-go => ../lib-instance-gen-go
-)
