@@ -3,8 +3,8 @@ module github.com/skeletonkey/watch-my-ip
 go 1.22
 
 require (
-	github.com/skeletonkey/lib-core-go v0.2.1
-	github.com/skeletonkey/lib-instance-gen-go v0.4.0
+	github.com/skeletonkey/lib-core-go v0.3.0
+	github.com/skeletonkey/lib-instance-gen-go v0.6.0
 )
 
 require (
