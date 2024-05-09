@@ -5,8 +5,8 @@ WORKDIR /app
 
 RUN apt-get update && apt-get -y upgrade
 # ADD file changes when new commits have been made - this forces a new checkout instead of using cache
-ADD https://api.github.com/repos/skeletonkey/watch-my-ip/git/refs/heads/init_app version.json
-RUN git clone -b init_app --single-branch --depth 1 https://github.com/skeletonkey/watch-my-ip.git watch-my-ip
+ADD https://api.github.com/repos/skeletonkey/watch-my-ip/git/refs/heads/main version.json
+RUN git clone -b main --single-branch --depth 1 https://github.com/skeletonkey/watch-my-ip.git watch-my-ip
 RUN cd watch-my-ip && go build -o bin/watch-my-ip app/*.go
 
 FROM golang:1.22.0-bookworm as prod
