@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Following environmental variables need to be set:
+# BRANCH - the branch being worked on; should be "main"
 # DOCKER_ARGS - extra args that need to be added to the 'docker run' command
 # IMAGE_NAME - Docker image name
 # PROJECT_CONFIG_FILE - config file for the project
