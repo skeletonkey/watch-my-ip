@@ -13,6 +13,8 @@ func main() {
 	config := getConfig()
 	log := logger.Get()
 
+	log.Info().Msg("starting watch-my-ip service")
+
 	var myIP string
 	for {
 		if curIP, err := ip.GetIp(); err != nil {
