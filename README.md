@@ -1,6 +1,6 @@
 # Watch My IP
 
-Send out an alert when my IP changes.
+Send out an alert when my external IP changes.
 
 The code uses [2ip.io](https://2ip.io) to discover the current external IP address.  If it changes an alert will be send using the [Pushover API](https://pushover.net).
 
