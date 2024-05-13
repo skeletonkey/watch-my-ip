@@ -1,0 +1,25 @@
+{
+    "app": {
+        "interval": 60
+    },
+    "ip": {
+        "url": "https://2ip.io/",
+        "pattern": "'IP address: (\\d+\\.\\d+.\\d+.\\d+)'"
+    },
+    "logger": {
+        "log_file": "/app/watchMyIP.log",
+        "log_level": "debug",
+        "to_file": false,
+        "to_stderr": false,
+        "to_stdout": true
+    },
+    "pushover": {
+        "enabled": true,
+        "url": "https://api.pushover.net/1",
+        "token": {
+            "account": "AccountToken",
+            "application": "ApplicationToken"
+        }
+    }
+
+}

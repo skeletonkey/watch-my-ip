@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Following environmental variables need to be set:
+# BRANCH - the branch being worked on; should be "main"
+# DOCKER_ARGS - extra args that need to be added to the 'docker run' command
+# IMAGE_NAME - Docker image name
+# PROJECT_CONFIG_FILE - config file for the project
+# REMOTE_DIR - path on remote server where Dockerfile (and others) will exist
+# REMOTE_SERVER - server that has docker on it where container will run
+# USER - user on remote server
+
+ssh $USER@$REMOTE_SERVER mkdir -p $REMOTE_DIR
+scp Dockerfile $USER@$REMOTE_SERVER:$REMOTE_DIR/.
+scp $PROJECT_CONFIG_FILE $USER@$REMOTE_SERVER:$REMOTE_DIR/.
+ssh $USER@$REMOTE_SERVER docker build -t $IMAGE_NAME $REMOTE_DIR
+ssh $USER@$REMOTE_SERVER docker stop -t 0 my_$IMAGE_NAME
+ssh $USER@$REMOTE_SERVER docker run --rm -d $DOCKER_ARGS --name my_$IMAGE_NAME $IMAGE_NAME
+ssh $USER@$REMOTE_SERVER rm $REMOTE_DIR/$PROJECT_CONFIG_FILE
