@@ -16,31 +16,31 @@ enable = [
     "unused", # Detect unused constants, variables, functions and types
 
 
-    # Suggested additional linters
+    # Additional linters
+    "asciicheck", # Detect if code identifiers does not contain non-ASCII characters
+    "bodyclose", # Check whether HTTP response bodies are closed
     "goconst", # Detect repeated values that can be made constants
     "gocyclo", # or "cyclop", # Detect cyclomatic complexity
     "goimports", # Ensure standard import formatting/ordering
     "misspell", # Fix spelling errors
+    "nakedret", # Detect naked returns
+    "tparallel", # Detects inappropriate use of t.Parallel()
     "typecheck", # Standard Go type checks
     "unconvert", # Detect unnecessary type conversions
     "unparam", # Detect unused function parameters
-    # "varcheck", # Find unused global variables and constants
+    #"asasalint" # Detect using any as variadic argument
     #"deadcode", # Finds unused code
+    #"depguard", # Forbid certain package imports
+    #"dupl", # Detect duplicate code
+    #"errchkjson", # some JSON-specific checks
+    #"goerr113", # Enforce standard error handling practices
     #"gofumpt", # Or "gofmt", # Enforce standard formatting
+    #"gomnd", # Magic number detection
     #"revive",  # General purpose linter --- add this one back in eventually
+    #"rowserrcheck", # Check whether Err of rows is checked
+    #"sqlclosecheck", # Ensure sql.Rows and sql.Stmt are closed
     #"structcheck", # Find unused struct fields
-
-    # Optional
-    "bodyclose", # Check whether HTTP response bodies are closed
-    "nakedret", # Detect naked returns
-    "tparallel", # Detects inappropriate use of t.Parallel()
-    # "depguard", # Forbid certain package imports
-    # "dupl", # Detect duplicate code
-    # "errchkjson", # some JSON-specific checks
-    # "goerr113", # Enforce standard error handling practices
-    # "gomnd", # Magic number detection
-    # "rowserrcheck", # Check whether Err of rows is checked
-    # "sqlclosecheck", # Ensure sql.Rows and sql.Stmt are closed
+    #"varcheck", # Find unused global variables and constants
 ]
 
 [issues]
