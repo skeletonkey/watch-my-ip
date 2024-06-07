@@ -8,38 +8,33 @@ enable = [
     # for the full, current list of available linters.
 
     # Default linters
-    #"deadcode", # Finds unused code
     "errcheck", # Detect unchecked errors
     "gosimple", # Suggest code simplifications
     "govet", # Reports suspicious constructs
     "ineffassign", # Detects unused variable assignments
     "staticcheck", # go vet on steroids
-    #"structcheck", # Find unused struct fields
-    "typecheck", # Standard Go type checks
     "unused", # Detect unused constants, variables, functions and types
-    # "varcheck", # Find unused global variables and constants
 
-    # Suggested additional linters
-    "gocyclo", # or "cyclop", # Detect cyclomatic complexity
+    # Additional linters
+    "asciicheck", # Detect if code identifiers does not contain non-ASCII characters
+    "bidichk", # Detects strings that are not valid UTF-8
+    "bodyclose", # Check whether HTTP response bodies are closed
+    "gocheckcompilerdirectives", # Check for compiler directives are valid
     "goconst", # Detect repeated values that can be made constants
-    #"gofumpt", # Or "gofmt", # Enforce standard formatting
+    "gocritic", # Go source code linter that maintains checks from the Go Code Review Comments
+    "gocyclo", # or "cyclop", # Detect cyclomatic complexity
     "goimports", # Ensure standard import formatting/ordering
+    "gosec", # Inspects source code for security problems
     "misspell", # Fix spelling errors
-    #"revive",  # General purpose linter --- add this one back in eventually
+    "nakedret", # Detect naked returns
+    "perfsprint", # Detects inefficient fmt.Sprintf
+    "prealloc", # Detect slice declarations that could potentially be preallocated
+    "predeclared", # Detects shadowing of predeclared identifiers
+    "tparallel", # Detects inappropriate use of t.Parallel()
+    "typecheck", # Standard Go type checks
     "unconvert", # Detect unnecessary type conversions
     "unparam", # Detect unused function parameters
-
-    # Optional
-    "bodyclose", # Check whether HTTP response bodies are closed
-    # "goerr113", # Enforce standard error handling practices
-    # "depguard", # Forbid certain package imports
-    # "dupl", # Detect duplicate code
-    # "errchkjson", # some JSON-specific checks
-    # "gomnd", # Magic number detection
-    "nakedret", # Detect naked returns
-    # "rowserrcheck", # Check whether Err of rows is checked
-    # "sqlclosecheck", # Ensure sql.Rows and sql.Stmt are closed
-    "tparallel", # Detects inappropriate use of t.Parallel()
+    "whitespace", # check for unwanted newlines
 ]
 
 [issues]
