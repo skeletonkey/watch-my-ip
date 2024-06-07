@@ -28,6 +28,8 @@ enable = [
     "gosec", # Inspects source code for security problems
     "misspell", # Fix spelling errors
     "nakedret", # Detect naked returns
+    "perfsprint", # Detects inefficient fmt.Sprintf
+    "prealloc", # Detect slice declarations that could potentially be preallocated
     "tparallel", # Detects inappropriate use of t.Parallel()
     "typecheck", # Standard Go type checks
     "unconvert", # Detect unnecessary type conversions
