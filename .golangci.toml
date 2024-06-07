@@ -25,6 +25,7 @@ enable = [
     "gocritic", # Go source code linter that maintains checks from the Go Code Review Comments
     "gocyclo", # or "cyclop", # Detect cyclomatic complexity
     "goimports", # Ensure standard import formatting/ordering
+    "gosec", # Inspects source code for security problems
     "misspell", # Fix spelling errors
     "nakedret", # Detect naked returns
     "tparallel", # Detects inappropriate use of t.Parallel()
