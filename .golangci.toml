@@ -18,7 +18,9 @@ enable = [
 
     # Additional linters
     "asciicheck", # Detect if code identifiers does not contain non-ASCII characters
+    "bidichk", # Detects strings that are not valid UTF-8
     "bodyclose", # Check whether HTTP response bodies are closed
+    "gocheckcompilerdirectives", # Check for compiler directives are valid
     "goconst", # Detect repeated values that can be made constants
     "gocyclo", # or "cyclop", # Detect cyclomatic complexity
     "goimports", # Ensure standard import formatting/ordering
