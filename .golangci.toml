@@ -22,6 +22,7 @@ enable = [
     "bodyclose", # Check whether HTTP response bodies are closed
     "gocheckcompilerdirectives", # Check for compiler directives are valid
     "goconst", # Detect repeated values that can be made constants
+    "gocritic", # Go source code linter that maintains checks from the Go Code Review Comments
     "gocyclo", # or "cyclop", # Detect cyclomatic complexity
     "goimports", # Ensure standard import formatting/ordering
     "misspell", # Fix spelling errors
