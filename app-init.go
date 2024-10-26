@@ -10,7 +10,7 @@ func main() {
 		app.WithCodeOwners("* @skeletonkey"),
 		app.WithConfig(),
 		app.WithGithubWorkflows("linter", "test"),
-		app.WithGoVersion("1.22"),
+		app.WithGoVersion("1.23"),
 		app.WithMakefile(),
 		app.WithPackages("ip"),
 	).Generate()
