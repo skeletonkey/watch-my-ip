@@ -1,10 +1,10 @@
 module github.com/skeletonkey/watch-my-ip
 
-go 1.22
+go 1.23
 
 require (
 	github.com/skeletonkey/lib-core-go v0.3.0
-	github.com/skeletonkey/lib-instance-gen-go v0.7.2
+	github.com/skeletonkey/lib-instance-gen-go v0.7.3
 )
 
 require (
